@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMURAI TRIP | Exclusive Premium Kendo Experience in Tokyo</title>
+    <style>
+        /* Base Styling & High-end Typography */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Playfair Display', 'Georgia', 'Hiragino Mincho ProN', serif;
+            line-height: 1.8;
+            color: #1a2530;
+            background-color: #faf9f5;
+            letter-spacing: 0.5px;
+        }
+        p, a, span, .btn-primary, .card-text, .info-val {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
+        }
+        
+        /* Premium Header Navigation */
+        header {
+            background-color: #060d17;
+            color: #fff;
+            padding: 25px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #b39262;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .header-logo {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .header-logo span {
+            color: #b39262;
+            font-weight: 300;
+        }
+        .header-nav a {
+            color: #d1d5db;
+            text-decoration: none;
+            margin-left: 35px;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+        }
+        .header-nav a:hover {
+            color: #b39262;
+        }
+        .btn-nav-book {
+            border: 1px solid #b39262;
+            padding: 10px 24px !important;
+            border-radius: 0px;
+            background-color: transparent;
+            color: #b39262 !important;
+        }
+        .btn-nav-book:hover {
+            background-color: #b39262 !important;
+            color: #060d17 !important;
+        }
+
+        /* Luxury Hero Section */
+        .hero {
+            background-color: #060d17;
+            position: relative;
+            padding: 180px 6% 160px 6%;
+            text-align: center;
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.25;
+            filter: grayscale(20%);
+        }
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            color: #fff;
+        }
+        .hero-badge {
+            display: inline-block;
+            border-bottom: 1px solid #b39262;
+            color: #b39262;
+            padding-bottom: 8px;
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 35px;
+            font-weight: 600;
+        }
+        .hero-content h1 {
+            font-size: 56px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            line-height: 1.25;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            color: #f3f4f6;
+        }
+        .hero-content p {
+            font-size: 18px;
+            color: #d1d5db;
+            margin-bottom: 45px;
+            font-weight: 300;
+            line-height: 1.8;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn-primary {
+            display: inline-block;
+            background-color: #b39262;
+            color: #060d17;
+            padding: 18px 45px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 0px;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .btn-primary:hover {
+            background-color: #c5a880;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(179, 146, 98, 0.3);
+        }
+
+        /* Section Global Typography */
+        .intro-section {
+            padding: 120px 6%;
+            background-color: #fff;
+        }
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-title-area {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        .section-tag {
+            font-size: 12px;
+            color: #b39262;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .section-title {
+            font-size: 38px;
+            color: #060d17;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .section-title-line {
+            width: 40px;
+            height: 1px;
+            background-color: #b39262;
+            margin: 20px auto 0 auto;
+        }
+        
+        /* Layout Grid Design */
+        .layout-grid {
+            display: flex;
+            align-items: center;
+            gap: 70px;
+        }
+        .text-block {
+            flex: 1.1;
+        }
+        .img-block {
+            flex: 0.9;
+        }
+        .text-block h3 {
+            font-size: 28px;
+            color: #060d17;
+            margin-bottom: 25px;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+        .text-block p {
+            margin-bottom: 25px;
+            color: #4b5563;
+            font-size: 15px;
+            font-weight: 300;
+        }
+        .feature-img {
+            width: 100%;
+            border: 1px solid #e5e7eb;
+            padding: 10px;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* Highlights & Focused Experience Section */
+        .highlights-section {
+            background-color: #f7f5f0;
+            padding: 120px 6%;
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .award-banner {
+            background-color: #fff;
+            border: 1px solid #e5e7eb;
+            border-top: 3px solid #b39262;
+            padding: 40px;
+            margin-bottom: 70px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        .award-img {
+            width: 280px;
+            height: 180px;
+            object-fit: cover;
+            border: 1px solid #f3f4f6;
+        }
+        .award-title {
+            font-size: 24px;
+            color: #060d17;
+            font-weight: 400;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+        .award-desc {
+            color: #4b5563;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        /* Focused Single Tour Feature Layout */
+        .exclusive-package-box {
+            background-color: #fff;
+            border: 1px solid #e5e7eb;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.04);
+        }
+        .package-img-side {
+            flex: 1.2;
+            min-height: 400px;
+        }
+        .package-img-side img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .package-body-side {
+            flex: 1;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: linear-gradient(to right, #fff, #faf9f6);
+        }
+        .package-tag {
+            font-size: 11px;
+            color: #b39262;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .package-title {
+            font-size: 28px;
+            color: #060d17;
+            font-weight: 400;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+        .package-text {
+            font-size: 15px;
+            color: #4b5563;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        /* Premium MICE & Corporate Section */
+        .mice-section {
+            padding: 130px 6%;
+            background-color: #060d17;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+        .mice-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .mice-title {
+            font-size: 42px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #f3f4f6;
+        }
+        .mice-subtitle {
+            font-size: 13px;
+            color: #b39262;
+            margin-bottom: 50px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .mice-img-full {
+            width: 100%;
+            max-width: 950px;
+            height: 480px;
+            object-fit: cover;
+            border: 1px solid #b39262;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            margin-bottom: 50px;
+        }
+        .mice-text-box {
+            max-width: 800px;
+            margin: 0 auto 45px auto;
+            font-size: 16px;
+            color: #9ca3af;
+            line-height: 1.9;
+            font-weight: 300;
+        }
+
+        /* Action Showcase Section */
+        .action-section {
+            padding: 120px 6%;
+            background-color: #fff;
+        }
+        .action-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+        .action-col {
+            background-color: #faf8f5;
+            padding: 50px;
+            border: 1px solid #e5e7eb;
+        }
+        .action-col h4 {
+            font-size: 22px;
+            color: #060d17;
+            margin-bottom: 20px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #b39262;
+            padding-bottom: 15px;
+        }
+        .action-gallery {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        .gallery-item {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            filter: contrast(102%);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            border: 1px solid #e5e7eb;
+        }
+        .gallery-item.large {
+            height: 545px;
+        }
+
+        /* Gallery Row Section */
+        .dojo-gallery-row {
+            padding: 80px 6%;
+            background-color: #faf9f5;
+            text-align: center;
+            border-top: 1px solid #e5e7eb;
+        }
+        .dojo-title-mini {
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #9ca3af;
+            margin-bottom: 45px;
+            font-weight: 600;
+        }
+        .dojo-flex-row {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+        }
+        .dojo-cell-box {
+            flex: 1;
+            background: #fff;
+            padding: 10px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+        .dojo-cell-box img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .dojo-caption {
+            font-size: 12px;
+            color: #6b7280;
+            margin-top: 12px;
+            font-style: italic;
+        }
+
+        /* Footer & Luxury CTA */
+        .footer-cta {
+            background-color: #060d17;
+            color: #fff;
+            padding: 100px 6%;
+            text-align: center;
+            border-top: 2px solid #b39262;
+        }
+        .footer-cta h2 {
+            font-size: 38px;
+            font-weight: 400;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .footer-cta p {
+            color: #9ca3af;
+            max-width: 650px;
+            margin: 0 auto 50px auto;
+            font-size: 16px;
+            font-weight: 300;
+        }
+        .footer-info-grid {
+            display: grid;
+            max-width: 650px;
+            margin: 50px auto 0 auto;
+            gap: 16px;
+            text-align: left;
+            font-size: 14px;
+            color: #9ca3af;
+            border-top: 1px solid #1f2937;
+            padding-top: 40px;
+            font-weight: 300;
+        }
+        .info-row {
+            display: flex;
+        }
+        .info-label {
+            width: 180px;
+            font-weight: 600;
+            color: #b39262;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        .copyright {
+            margin-top: 80px;
+            font-size: 11px;
+            color: #4b5563;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-logo">SAMURAI <span>TRIP</span></div>
+        <div class="header-nav">
+            <a href="#about">ABOUT KENDO</a>
+            <a href="#packages">THE EXPERIENCE</a>
+            <a href="#mice">CORPORATE & MICE</a>
+            <a href="#contact" class="btn-nav-book">RESERVE NOW</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="TOKYO.jpg" alt="TOKYO Kendo Group Shot">
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">Award-Winning Cultural Masterclass</div>
+            <h1>Unleash Your Inner Samurai</h1>
+            <p>Discover the authentic spirit, profound mindset, and ancient discipline of traditional Kendo in the heart of Tokyo. Designed exclusively for global travelers, corporate executives, and those seeking the pinnacle of Japanese martial culture.</p>
+            <a href="#contact" class="btn-primary">Request Invitation</a>
+        </div>
+    </section>
+
+    <section id="about" class="intro-section">
+        <div class="section-container">
+            <div class="section-title-area">
+                <span class="section-tag">The Way of the Sword</span>
+                <h2 class="section-title">What is Kendo?</h2>
+                <div class="section-title-line"></div>
+            </div>
+            
+            <div class="layout-grid">
+                <div class="text-block">
+                    <h3>More Than a Sport—A Lifelong Spiritual Journey</h3>
+                    <p>Kendo (the Way of the Sword) is a modern Japanese martial art descended from the ancient swordsmanship of the legendary Samurai. It disciplines the human character through the application of the principles of the Katana.</p>
+                    <p>By learning proper posture, breathing, and the powerful shout (Kiai), participants build deep mental clarity, mutual respect, and unwavering inner strength.</p>
+                    <p>Our program completely breaks down language barriers, allowing you to seamlessly absorb generations of Japanese culture through hands-on practice sessions under immaculate guidance.</p>
+                </div>
+                <div class="img-block">
+                    <img src="★_MG_6529.jpg" class="feature-img" alt="Kendo Instruction Form">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="packages" class="highlights-section">
+        <div class="section-container">
+            <div class="section-title-area">
+                <span class="section-tag">Premium Inbound Excellence</span>
+                <h2 class="section-title">The Signature Experience</h2>
+                <div class="section-title-line"></div>
+            </div>
+
+            <div class="award-banner">
+                <img src="DSC06266.jpg" class="award-img" alt="Japan Travel Awards Spotlight">
+                <div>
+                    <div class="award-title">Winner of the Prestigious Japan Travel Awards 2025</div>
+                    <p class="award-desc">SAMURAI TRIP has been proudly awarded the <strong>Best Inbound Travel Experience Award</strong>. Recognized for unparalleled cultural storytelling, high accessibility for global dignitaries, and exceptional engagement through traditional martial arts.</p>
+                </div>
+            </div>
+
+            <div class="exclusive-package-box">
+                <div class="package-img-side">
+                    <img src="JTA_SamuraiTrip2.jpg" alt="Interactive Target Balloon Game">
+                </div>
+                <div class="package-body-side">
+                    <span class="package-tag">The Main Masterpiece Tour</span>
+                    <h3 class="package-title">Main Kendo Experience Tour</h3>
+                    <p class="package-text">Put on authentic armor (Bogu), wield a real bamboo shinai, and master the core techniques of the legendary samurai. This high-energy program integrates strict tradition with a thrilling, interactive target balloon-popping match among your peers to finish your training in style.</p>
+                    <div>
+                        <a href="#contact" class="btn-primary" style="padding: 14px 35px; font-size: 12px;">View Tour Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mice" class="mice-section">
+        <div class="mice-container">
+            <h2 class="mice-title">Corporate MICE & Large Group Team Building</h2>
+            <div class="mice-subtitle">Unifying Global Organizations Through the Samurai Spirit</div>
+            
+            <img src="00.jpg" class="mice-img-full" alt="Large Scale Corporate Convention Group Photo">
+            
+            <div class="mice-text-box">
+                <p>Looking for a high-impact group activity that breaks the mold of generic company retreats? SAMURAI TRIP specializes in hosting grand-scale corporate incentive events, executive delegations, and international conferences.</p>
+                <p style="margin-top: 20px;">We possess the direct capacity, certified premium equipment, and spacious historical Dojo networks to smoothly accommodate large-scale reservations from <strong>50 up to over 300 concurrent participants</strong>. Align your team's focus, cultivate true mental resilience, and celebrate shared victories.</p>
+            </div>
+            
+            <a href="#contact" class="btn-primary" style="background-color:#fff; color:#060d17;">Request Corporate Brochure</a>
+        </div>
+    </section>
+
+    <section class="action-section">
+        <div class="section-container">
+            <div class="action-grid">
+                <div class="action-col">
+                    <h4>The Power of "Kiai" (Vocal Strike)</h4>
+                    <p style="color:#4b5563; font-size:14px; margin-bottom:20px; font-weight:300;">True swordsmanship requires matching your voice, blade, and body perfectly into one absolute moment. Watch as our international participants channel their focus under professional guidance.</p>
+                    <div class="action-gallery">
+                        <img src="00.jpg" class="gallery-item" alt="Dojo Standby Line">
+                        <img src="DSC06506.jpg" class="gallery-item" alt="Intense Engagement Match">
+                    </div>
+                </div>
+                <div class="action-col">
+                    <h4>Inclusive Global Trust</h4>
+                    <p style="color:#4b5563; font-size:14px; margin-bottom:20px; font-weight:300;">We cater proudly to travelers from all backgrounds, ages, and fitness thresholds. Our tailored instructions place security and historical accuracy above all else, ensuring a fun, welcoming, yet deeply reverent experience.</p>
+                    <div class="action-gallery">
+                        <img src="S__227696656.jpg" class="gallery-item large" alt="Dojo Group Pose">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dojo-gallery-row">
+        <div class="section-container">
+            <div class="dojo-title-mini">Captured Dojo Moments</div>
+            <div class="dojo-flex-row">
+                <div class="dojo-cell-box">
+                    <img src="DSC_3069.jpg" alt="Posture Alignments">
+                    <div class="dojo-caption">Step-by-step Posture Alignments</div>
+                </div>
+                <div class="dojo-cell-box">
+                    <img src="★_MG_6529.jpg" alt="Symmetrical Blade Strikes">
+                    <div class="dojo-caption">Symmetrical Blade Strikes</div>
+                </div>
+                <div class="dojo-cell-box">
+                    <img src="DSC06506.jpg" alt="High energy Impact">
+                    <div class="dojo-caption">Unrivaled High-energy Sparks</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="footer-cta">
+        <h2>Begin Your Journey Today</h2>
+        <p>Advance booking is strictly required to reserve premium armor configurations and coordinate exclusive Dojo availability for private slots.</p>
+        
+        <a href="mailto:info@samuraitrip.com" class="btn-primary">Send Private Inquiry</a>
+
+        <div class="footer-info-grid">
+            <div class="info-row">
+                <div class="info-label">Main Location</div>
+                <div class="info-val">Chiyoda-ku, Tokyo, Japan</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Business Hours</div>
+                <div class="info-val">09:00 AM – 06:00 PM (JST)</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Accreditations</div>
+                <div class="info-val">Japan Travel Awards Official Winner • Best Inbound Content Provider</div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2026 SAMURAI TRIP. All Rights Reserved. Traditional Kendo Inbound Experiences.
+        </div>
+    </section>
+
+</body>
+</html>
